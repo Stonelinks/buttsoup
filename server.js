@@ -47,7 +47,6 @@ var assignVoice = function(client) {
 };
 
 io.sockets.on('connection', function(client) {
-  console.log('Connecting client ' + client.id);
 
   clients[client.id] = client;
   updateCount();
@@ -55,7 +54,6 @@ io.sockets.on('connection', function(client) {
   assignVoice(client);
 
   client.on('messages:input', function(data) {
-    console.log('Client ' + client.id + ' says: ' + data);
     client.get('color', function(err, color) {
       client.get('voice', function(err, voice) {
         io.sockets.emit('messages:output', color, voice, data);
@@ -65,7 +63,6 @@ io.sockets.on('connection', function(client) {
 
   client.on('disconnect', function() {
     delete clients[client.id];
-    console.log('Client ' + client.id + ' is getting out of here');
     updateCount();
   });
 

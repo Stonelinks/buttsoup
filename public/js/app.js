@@ -1,15 +1,9 @@
 $(function() {
   var socket = io.connect()
 
-  socket.on('connect', function(data) {
-    // nickname = prompt('Whats your nickname ?') || 'Annonyous';
-    // socket.emit('join', 'anon');
-  });
-
   var $messageBox = $('#message-log');
 
   socket.on('messages:output', function(color, voice, message) {
-    // height = $messageBox[0].scrollHeight;
     $messageBox.prepend('<p class="lead" style="color: ' + color + ';">' + message + '</p>');
     speak(message, voice);
     $messageBox.scrollTop(0);
@@ -21,15 +15,14 @@ $(function() {
     $counterBox.text(data.number);
   });
   
-  var $input = $('#chat-input');
+  var $input = $('#chat-input').find('input');
 
   socket.on('color', function(color) {
-    $input.find('input').css('color', color);
+    $input.css('color', color);
   });
 
-  $input.on('submit', function(e) {
+  $('#chat-input').on('submit', function(e) {
     e.preventDefault();
-    var $input = $(this).find('input');
     if ($input.val().length > 0) {
       socket.emit('messages:input', $input.val());
     }
