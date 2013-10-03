@@ -29,11 +29,11 @@ var updateCount = function() {
 
 var getRandomInt = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 var pickRandom = function(array) {
-  return array[Math.floor(Math.random() * array.length)]
-}
+  return array[Math.floor(Math.random() * array.length)];
+};
 
 var assignColor = function(client) {
   var color = pickRandom(colors);

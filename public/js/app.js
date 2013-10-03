@@ -9,10 +9,10 @@ $(function() {
   };
 
   var pickRandom = function(array) {
-    return array[Math.floor(Math.random() * array.length)]
-  }
+    return array[Math.floor(Math.random() * array.length)];
+  };
 
-  var socket = io.connect()
+  var socket = io.connect();
   var $messageBox = $('#message-log');
 
   socket.on('messages:output', function(color, voice, message) {
@@ -48,24 +48,24 @@ $(function() {
   var makeImage = function(s) { return '<img src="' + s + '">'; };
 
   var modes = {
-    
+
     'chat': function(s) {
       return s;
     },
-    
+
     'code': function(s) {
       return '<script>' + s + '</script>';
     },
-    
+
     'image': makeImage,
-    
+
     'butt': function(s) {
       return makeImage('http://discoverygc.com/wiki/images/thumb/3/34/Doge_%281%29.jpg/264px-Doge_%281%29.jpg');
     },
-    
+
     'cage': function(s) {
       return makeImage(pickRandom([
-        
+
         // this list lifted from the nCage chrome extension
         'http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Nicolas_Cage_2011_CC.jpg/220px-Nicolas_Cage_2011_CC.jpg',
         'http://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg/220px-Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg',
