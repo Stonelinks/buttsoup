@@ -27,16 +27,21 @@ var updateCount = function() {
   io.sockets.emit('count', { number: _.size(clients) });
 };
 
-var assignColor = function(client) {
-  var color = colors[Math.floor(Math.random() * colors.length)];
+var getRandomInt = function(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+var pickRandom = function(array) {
+  return array[Math.floor(Math.random() * array.length)]
+}
+
+var assignColor = function(client) {
+  var color = pickRandom(colors);
   client.set('color', color);
   client.emit('color', color);
 };
 
-var getRandomInt = function(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+
 
 var assignVoice = function(client) {
   client.set('voice', {
