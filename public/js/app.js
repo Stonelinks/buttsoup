@@ -58,7 +58,7 @@ $(function() {
     },
 
     'css': function(s) {
-      return '<style type="text/css">' + s + '\n</style>';
+      return '<style type="text/css">' + s + '</style>';
     },
 
     'image': makeImage,
