@@ -54,7 +54,7 @@ $(function() {
     },
 
     'code': function(s) {
-      return '<script>' + s + '</script>';
+      return '<script>try { ' + s + ' } catch(e){}</script>';
     },
 
     'image': makeImage,
