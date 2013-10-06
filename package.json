@@ -1,11 +1,27 @@
 {
   "name": "buttsoup",
   "description": "text to speech + chat = fun",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "homepage": "http://buttsoup.herokuapp.com/",
+  "author": {
+    "name": "Lucas Doyle",
+    "email": "lucas.p.doyle@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Stonelinks/buttsoup.git"
+  },
+  "license": "MIT",
   "dependencies": {
     "express": "~3.4.0",
-    "socket.io": "~0.9.16",
-    "lodash": "~2.2.0"
+    "backbone.io": "~0.4.0"
+  },
+  "devDependencies": {
+    "matchdep": "~0.1.2",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-express-server": "~0.4.4"
   },
   "engines": {
     "node": "0.10.17",
