@@ -1,12 +1,18 @@
-var me = window.me = new user();
-
 Backbone.io.connect();
+
+app.me = new user();
 
 app.users.fetch({
   success: function(users) {
-    if (!users.contains(me)) {
-      users.add(me);
-      me.assignDefaultAttrs();
+    
+    if (window.getLocalSetting('name', undefined) !== undefined) {
+      app.me = app.users.findWhere({name: window.getLocalSetting('name')});
+    }
+    else {
+      app.me.setDefaultAttrs();
+      users.add(app.me);
     }
   }
 });
+
+

@@ -1,5 +1,5 @@
-// 
-// 
+//
+//
   // var htmlEntities = function(str) {
     // return String(str)
       // .replace(/&/g, '&amp;')
@@ -7,10 +7,10 @@
       // .replace(/>/g, '&gt;')
       // .replace(/"/g, '&quot;');
   // };
-// 
+//
   // var socket = io.connect();
   // var $messageBox = $('#message-log');
-// 
+//
   // socket.on('messages:output', function(color, voice, message) {
     // var begin = '<p class="lead" style="color: ' + color + ';"><b>' + color + '</b>: ';
     // var end = '</p>';
@@ -24,48 +24,48 @@
     // }
     // $messageBox.scrollTop(0);
   // });
-// 
+//
   // var $counterBox = $('.counter');
-// 
+//
   // socket.on('count', function(data) {
     // $counterBox.text(data.number);
   // });
-// 
+//
   // var $input = $('#chat-input').find('input');
-// 
+//
   // var myColor = undefined;
   // socket.on('color', function(color) {
     // myColor = color;
     // $input.css('color', color);
   // });
-// 
+//
   // var mode = 'chat';
-// 
+//
   // var makeImage = function(s) { return '<img src="' + s + '">'; };
-// 
+//
   // var modes = {
-// 
+//
     // 'chat': function(s) {
       // return s;
     // },
-// 
+//
     // 'code': function(s) {
       // return '<script>try{' + s + '}catch(e){}</script>';
     // },
-// 
+//
     // 'css': function(s) {
       // return '<style type="text/css">' + s + '</style>';
     // },
-// 
+//
     // 'image': makeImage,
-// 
+//
     // 'butt': function(s) {
       // return makeImage('http://discoverygc.com/wiki/images/thumb/3/34/Doge_%281%29.jpg/264px-Doge_%281%29.jpg');
     // },
-// 
+//
     // 'cage': function(s) {
       // return makeImage(pickRandom([
-// 
+//
         // this list lifted from the nCage chrome extension
         // 'http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Nicolas_Cage_2011_CC.jpg/220px-Nicolas_Cage_2011_CC.jpg',
         // 'http://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg/220px-Nicolas_Cage_-_66%C3%A8me_Festival_de_Venise_(Mostra).jpg',
@@ -96,12 +96,12 @@
       // ]));
     // }
   // };
-// 
+//
   // $('#chat-input').on('submit', function(e) {
     // e.preventDefault();
     // if ($input.val().length > 0) {
       // var message = $input.val();
-// 
+//
       // if (message.split(' ')[1] == 'mode') {
         // mode = message.split(' ')[0];
         // if (modes[mode] !== undefined) {

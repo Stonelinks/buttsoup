@@ -12,14 +12,14 @@ module.exports = function(grunt) {
     watch: {
 
       options: {
-        livereload: 31345,
+        livereload: 31345
       },
 
       server: {
         options: {
-          nospawn: true 
+          nospawn: true
         },
-        
+
         files: ['server.js'],
         tasks: ['express']
       },
@@ -58,12 +58,12 @@ module.exports = function(grunt) {
         dest: 'public/js/client.js'
       }
     },
-    
+
     express: {
       options: {
         port: 5000
       },
-      
+
       server: {
         options: {
           script: 'server.js'
